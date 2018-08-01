@@ -7,13 +7,15 @@ import { HEROES } from 'src/app/mock-heroes';
   templateUrl: './heoroes.component.html',
   styleUrls: ['./heoroes.component.css']
 })
+
 export class HeoroesComponent implements OnInit {
   heroes = HEROES;
   selectedHero: Hero;
-  onSelect(hero: Hero): void {
-    this.selectedHero = hero;
-  }
+
   constructor() { }
   ngOnInit() { }
 
+  onSelect(hero: Hero): void {
+    this.selectedHero = hero;
+  }
 }
